@@ -5,12 +5,14 @@ namespace Drupal\fflch_fakecontent;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
-use Drupal\Core\Path\AliasManagerInterface;
+//use Drupal\Core\Path\AliasManagerInterface;
+use Drupal\path_alias\AliasManagerInterface;
 use Drupal\Core\State\StateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Component\Utility\Html;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
 use Drupal\language\Entity\ConfigurableLanguage;
+use Drupal\Core\File\FileSystemInterface;
 
 /**
  * Defines a helper class for importing default content.
@@ -72,7 +74,8 @@ class InstallHelper implements ContainerInjectionInterface {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('path.alias_manager'),
+      //$container->get('path.alias_manager'),
+      $container->get('path_alias.manager'),
       $container->get('entity_type.manager'),
       $container->get('module_handler'),
       $container->get('state')
@@ -224,7 +227,8 @@ class InstallHelper implements ContainerInjectionInterface {
    */
   protected function fileUnmanagedCopy($path) {
     $filename = basename($path);
-    return file_unmanaged_copy($path, 'public://' . $filename, FILE_EXISTS_REPLACE);
+    //return file_unmanaged_copy($path, 'public://' . $filename, FILE_EXISTS_REPLACE);
+    return  \Drupal::service('file_system')->copy($path, 'public://' . $filename, FileSystemInterface::EXISTS_REPLACE);
   }
 
 }

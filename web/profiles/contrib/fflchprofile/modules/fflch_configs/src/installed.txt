@@ -59,13 +59,11 @@ views_slideshow
 views_slideshow_cycle
 webform
 webform_attachment
-webform_boleto_usp
 webform_entity_print
 webform_entity_print_attachment
 webform_node
 webform_scheduled_email
 webform_ui
-webform_node_analysis
 webform_xlsx_export
 webform_templates
 webform_views

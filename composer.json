@@ -77,6 +77,7 @@
         "drupal/ckeditor_uploadimage": "2.0",
         "drupal/colorbox": "1.6",
         "drupal/colorbutton": "1.2",
+	"drupal/collapse_text": "1.0",
         "drupal/conditional_fields": "1.0-alpha10",
         "drupal/config_perms": "2.0",
         "drupal/console": "^1.9",
@@ -157,7 +158,6 @@
         "npm-asset/tabletoolstoolbar": "0.0.1",
         "oomphinc/composer-installers-extender": "^2.0",
         "uspdev/replicado_drupal": "1.0.0",
-        "uspdev/webform_boleto_usp": "1.0.9",
         "fflch/cem-theme": "1.0.1",
         "fflch/webform_ficha_catalografica": "1.0.2",
         "fflch/fflch-theme": "1.0.5"
@@ -180,6 +180,10 @@
             "drupal/editor_file": {
                 "3057895 - Uploaded files are not permanent":
                     "https://www.drupal.org/files/issues/2019-05-29/file-upload-marked-permanent-3057895-2.patch"
+            },
+            "drupal/collapse_text": {
+                "Patch para funcionar módulo no D9":
+                    "https://www.drupal.org/files/issues/2020-06-21/collapse_text-d9-3124451-4.patch"
             },
             "drupal/youtube_playlist": {
                 "Mudanças temporárias para uso na FFLCH":

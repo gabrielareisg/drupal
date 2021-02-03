@@ -38,6 +38,7 @@ function fflchprofile_install() {
   \Drupal::service('module_installer')->install(['fflch_configs'], TRUE);
 
   // fflch fake content
+//  \Drupal::service('module_installer')->install(['fflch_fakecontent'], TRUE);
   \Drupal::service('module_installer')->install(['fflch_fakecontent'], TRUE);
 
   // Desinstala módulo que fica verificando atualizações

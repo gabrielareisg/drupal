@@ -9,6 +9,11 @@ use Drupal\language\Entity\ConfigurableLanguage;
 use Drupal\user\Entity\Role;
 use Drupal\user\RoleInterface;
 
+use Drupal\Core\File\FileSystemInterface;
+use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Config\ConfigFactoryOverrideInterface;
+use Drupal\Core\Config\StorageInterface;
+
 class Configs {
 
   public function doConfig($install = false){
@@ -42,7 +47,11 @@ class Configs {
     $dir = $dir . '/config/mandatory/';
 
     // Arquivos .yml
-    $files = file_scan_directory($dir,'/^.*\.yml$/i',[]);
+    //$files = file_scan_directory($dir,'/^.*\.yml$/i',[]);
+    //$files = Drupal\Core\File\FileSystemInterface::scanDirectory($dir,'/^.*\.yml$/i',[]);
+    $files = \Drupal::service('file_system')->scanDirectory($dir,'/^.*\.yml$/i',[]);
+   
+
     foreach ($files as $file) {
         $yml = $dir . $file->name . '.yml';
         $configs = Yaml::parse(file_get_contents($yml));
