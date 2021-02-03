@@ -40,19 +40,7 @@ Instalação usando o profile fflch com *sqlite*:
 Servidor http básico:
 
     cd drupal
-    ./vendor/bin/drupal serve -vvv
-
-Caso queira escolher ip e porta:
-
-    ./vendor/bin/drupal serve 0.0.0.0:8000 -vvv
-
-Criando nodes aleatórios:
-
-    ./vendor/bin/drupal create:nodes
-
-Deletando todos nodes:
-
-    ./vendor/bin/drupal entity:delete node --all
+    ./vendor/bin/drush runserve -v
 
 Se quiser apagar o banco para fazer uma instalação zerada:
 

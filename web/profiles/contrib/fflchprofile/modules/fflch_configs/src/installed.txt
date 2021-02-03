@@ -17,6 +17,7 @@ ckeditor_readmore
 ckeditor_uploadimage
 ckeditor_bootstrap_table
 ckeditor_resize
+collapse_text
 insert_view_adv
 colorbutton
 conditional_fields

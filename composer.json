@@ -32,6 +32,10 @@
             "type": "git",
             "url": "https://github.com/fflch/webform_invitation_temporario.git"
         },
+        "collapse_text_temporario": {
+            "type": "git",
+            "url": "https://github.com/fflch/collapse_text_temporario.git"
+        },
         "cem-theme": {
             "type": "git",
             "url": "https://github.com/fflch/cem-theme.git"
@@ -77,7 +81,7 @@
         "drupal/ckeditor_uploadimage": "2.0",
         "drupal/colorbox": "1.6",
         "drupal/colorbutton": "1.2",
-	"drupal/collapse_text": "1.0",
+	    "drupal/collapse_text": "dev-master",
         "drupal/conditional_fields": "1.0-alpha10",
         "drupal/config_perms": "2.0",
         "drupal/console": "^1.9",
@@ -180,10 +184,6 @@
             "drupal/editor_file": {
                 "3057895 - Uploaded files are not permanent":
                     "https://www.drupal.org/files/issues/2019-05-29/file-upload-marked-permanent-3057895-2.patch"
-            },
-            "drupal/collapse_text": {
-                "Patch para funcionar módulo no D9":
-                    "https://www.drupal.org/files/issues/2020-06-21/collapse_text-d9-3124451-4.patch"
             },
             "drupal/youtube_playlist": {
                 "Mudanças temporárias para uso na FFLCH":
